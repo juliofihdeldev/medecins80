@@ -1,0 +1,401 @@
+<?php
+	include("admin/phpscripts/connexion.php");
+	include("admin/phpscripts/fonctions.php");
+?>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+		<title>Accueil | Medecins80</title>
+		<link rel="icon" type="image/ico" href="images/logo.jpg" />
+		<link rel="stylesheet" href="css/design.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/carousel.js"></script>
+	</head>
+	<body>
+		<!-- <?php include("includes/enTete.php");?>  -->
+	<div id="enTete">
+		<div class="content">
+			<div class="media">
+				<div class="item">
+					<img style="width:45%;margin-top:13px;opacity:0.7;" src="images/i_g.png" />
+				</div>
+				<div class="item">
+					<img style="width:90%;margin-top:3px;opacity:0.7;" src="images/t_g.png" />
+				</div>
+				<div class="item">
+					<img style="width:55%;margin-top:10px;" src="images/f_g.png" />
+				</div>
+				<div class="cont">
+					<strong>Call Us:</strong> +509 48188107 | Email : <a class="mailto" href="mailto:contact@gmedicins80.com">contact@medicins80.com</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menu">
+		<div class="content">
+			<div class="link">
+					<a href="index.html">
+						<div class="item ">
+							Accueil
+						</div>
+					</a>
+					<a href="index.html">
+						<div class="item">
+							Actualités
+						</div>
+					</a>
+					 
+					<a href="aboutus.html">
+						<div class="item">
+						A Propos <!-- Mission -> Vision -> Objectifs --> 
+						</div>
+					</a>
+
+					<a href="service.html">
+						<div class="item active">
+							Programmes
+						</div>
+					</a>
+					
+					<a href="comment_devenir_membres.html">
+						<div class="item">
+								Devenir membre 
+						</div>
+					</a>
+				
+					<a href="contact.html">
+						<div class="item">
+							Contact
+						</div>
+					</a>
+					<a href="don.html">
+						<div class="item">
+							Faire un don
+						</div>
+					</a>
+				
+				<div class="search">
+					<img src="images/loupe.png" />
+				</div>
+			</div>
+			<div class="logo">
+				<a href="index.php"> <img src="images/logo.jpg" /> </a>
+			</div>
+		</div>
+	</div>
+	<div id="searchDiv">
+		<div class="content">
+			<img class="close" src="images/token_x.png" />
+			<input type="text" name="search" placeholder="Type To Search" />
+		</div>
+	</div>
+		
+		<div id="welcome">
+			<div class="content">
+				<div class="bag">
+					<img src="images/19apie-mus-2.jpg" />
+				</div>
+				<div class="text">
+					<div class="title">Les differentes Programmes de Medicns80</div>
+					<div class="title2"> Taux de divulgation </div>
+					<div class="bar">
+						<div class="one">
+							
+							Non Sida se twop ato.
+						</div>
+						<div class="two">
+							70%
+						</div>
+					</div>
+					<div class="bar">
+						<div class="one">
+							Malaria kaba
+						</div>
+						<div class="two">
+							60%
+						</div>
+					</div>
+					<div class="bar">
+						<div class="one">
+							Tibekiloz pap tiyem
+						</div>
+						<div class="two">
+							73%
+						</div>
+					</div>
+					<div class="submit">
+						<div class="cart">
+							&#59197;
+						</div>
+						<a href="service.html">Plus infos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="infos">
+			<div class="body">
+				<div class="content">
+					<div class="item">
+						<div class="pixOne">
+							&#127912;
+						</div>
+						<div class="text">
+							<div class="cntOne">25</div>
+							<div class="txt">Conférence </div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="pixTwo">
+							&#59197;
+						</div>
+						<div class="text">
+							<div class="cntTwo">160</div>
+							<div class="txt">Séminaire et Atelier</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="pixThree">
+							&#127758;
+							<img >
+						</div>
+						<div class="text">
+							<div class="cntThree">25</div>
+							<div class="txt">Clinique communautaire </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="gregory">
+			<div class="content">
+						<div class="bcpImage">
+							<div class="pix1">
+								<img src="images/img-01.jpg"/>
+							</div>
+								<div class="pix2">
+								<img src="images/img-02.jpg"/>
+							</div>
+								<div class="pix3">
+								<img src="images/img-04.jpg"/>
+							</div>
+							<div class="pix4">
+								<img src="images/img-03.jpg"/>
+							</div>
+						</div>
+						
+						<div class="infos">
+							<div class="title">
+								<span class="bar">
+									<span class="gras">Medecins80</span> <span class="italic">Membre</span>
+								</span>
+								<div class="bBar">
+									.
+								</div>
+								<div class="min">
+									Devenir membre de Médecins 80
+								</div>
+								<div class="text">
+									<span class="jaune">Devenir membre de Médecins 80</span>
+								
+									<b>
+										Faites de vos temps libre quelques chose passionnant.
+									</b>
+									
+									<p>
+										. Etre né à partir en 1980 (moins de 36 ans) <br/>
+										. Être un  professionnel de santé (médecin, infirmière, technologiste médical, pharmacien, psychologue, travailleur social). <br/>
+										. Certificat ou diplôme d’études universitaires
+										<br/>
+										. Carte d’identification nationale 
+										<br/>
+										. 1 photo d’identité récente 
+										<br/>
+										.Frais de dossier : 500 gourdes
+
+									</p>
+
+							</div>
+							</div>
+						</div>
+				
+			</div>
+		</div>
+	
+		<div id="gregoryThree">
+			<div class="content">
+						
+						<div class="pix">
+							<img src="images/telecommunications.jpg"/>
+						</div>
+						<div class="text">
+							<div class="title">
+							A quoi sert vos don
+							</div>
+							<div class="txt">
+							Some long text about vos don 
+							<ul>
+								<li> Some SHORT text  </li> 
+								<li> Some SHORT text</li> 
+								<li> Some SHORT text</li>
+								<li> Some SHORT text</li>
+								<li> Some SHORT text </li>
+								<li>Ect                                                  ...</li>
+								
+							</ul>
+							</div>
+						</div>
+				
+			</div>
+		</div>
+		<div id="what">
+			<div class="content">
+				<div class="title">
+					<span class="bar">
+						<span class="gras">Ce que nos clients  </span> <span class="italic">Disent</span>
+					</span>
+					<div class="bBar">
+						.
+					</div>
+					<div class="min">
+						Écoutons ce que nos clients  disent de nous
+					</div>
+				</div>
+				<div class="one_personne">
+					
+					<div class="client">
+						<div class="pix">
+							<img src="images/client.jpg" />
+						</div>
+						<div class="name">
+							<strong>Jean Karc </strong><br /> 
+						</div>
+						
+					</div>
+					<div class="text">
+						J'adore cette organisation ! Elle m'a permis de rester en vie , 
+						J'adore cette organisation ! Elle m'a permis de rester en vie , 
+					</div>
+				</div>
+				
+				<div class="one_personne">
+					
+					<div class="client">
+						<div class="pix">
+							<img src="images/client.jpg" />
+						</div>
+						<div class="name">
+							<strong>Jean Karc </strong><br /> 
+						</div>
+						
+					</div>
+					<div class="text">
+						J'adore cette organisation ! Elle m'a permis de rester en vie , 
+						J'adore cette organisation ! Elle m'a permis de rester en vie , 
+					</div>
+				</div>
+				<div class="one_personne">	
+					<div class="client">
+						<div class="pix">
+							<img src="images/client.jpg" />
+						</div>
+						<div class="name">
+							<strong>Jean Karc </strong><br /> 
+						</div>
+						
+					</div>
+					<div class="text">
+						J'adore cette organisation ! Elle m'a permis de rester en vie , 
+						J'adore cette organisation ! Elle m'a permis de rester en vie , 
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- 	<?php include("includes/piedPage.php");?> -->
+	
+	<div id="contact">
+		<div class="content">
+			<table>
+				<tr>
+					<td>
+						<div class="item">
+							<img class="logopied" src="images/logo.jpg" />
+							<div class="txt">
+								Medecins80 est la meilleur Some text
+							</div>
+							<span class="em"><em>Enjoy your design!</em></span>
+							</div>
+					</td>
+					<td>
+						<div class="item">
+							<div class="titre">Information sur organisation</div>
+							<div class="it">
+								<span class="square">?</span> 
+								<a href="aboutus.html"> Apropos de Medcin80</a>
+							</div>
+							<div class="it">
+								<span class="square">?</span> 
+								 Medcin80 
+							</div>
+							<div class="it">
+								<span class="square">?</span> 
+								Privacy Policy
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="item">
+							<div class="titre">Newsletter</div>
+							<form id="addNewsletter" method="post" action="newsletters.php">
+								<input type="text" value="newsletters" name="w" hidden/>
+								<label for="mail">Email adress</label><br />
+								<input class="input" type="email" name="email" placeholder="Your email address"  />
+								<input class="submit" type="submit" value="Sign up" />
+							</form>
+							<div class="btnInfoResult">
+							
+								<div class="infoResult">
+									<div class="infoResultText">
+										
+									</div>
+									<a href="index.html">
+										<div class="confirm">
+											Fermer
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="item">
+							<div class="titre">Tags</div>
+					
+						<ul>
+							<li>Fait un Don </li>
+							
+						</ul>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="copyright">
+			© Copyright <!-- '.date('Y').' --> Mai 2016 -Medcin80 | Design by <a href="www.fihdel.com">FIHDEL</a>
+		</div>
+	</div>
+	<div id="modal">
+		<div class="loading">
+			<img src="images/loading.gif" /><br />
+			Loading
+		</div>
+		<div class="alert">
+			
+		</div>
+		<div class="shop">
+			
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,360 @@
+<?php
+	include("admin/phpscripts/connexion.php");
+	include("admin/phpscripts/fonctions.php");
+?>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+		<title>GRA  | Import Export  & Customer Clearance </title>
+		<link rel="icon" type="image/ico" href="images/gralogo.jpg" />
+		<link rel="stylesheet" href="css/design.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/carousel.js"></script>
+	</head>
+	<body>
+		<!-- <?php include("includes/enTete.php");?>  -->
+		<div id="enTete">
+		<div class="content">
+			<div class="media">
+				<div class="item">
+					<img style="width:45%;margin-top:13px;opacity:0.7;" src="images/i_g.png" />
+				</div>
+				<div class="item">
+					<img style="width:90%;margin-top:3px;opacity:0.7;" src="images/t_g.png" />
+				</div>
+				<div class="item">
+					<img style="width:55%;margin-top:10px;" src="images/f_g.png" />
+				</div>
+				<div class="cont">
+					<strong>Call Us:</strong> +509 37036770 | Email : <a class="mailto" href="mailto:contact@gra-Haïti.com">contact@gra-Haïti.com</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menu">
+		<div class="content">
+			<div class="link">
+					<a href="index.html">
+						<div class="item">
+							Accueil
+						</div>
+					</a>
+					<a href="service.html">
+						<div class="item">
+							Services
+						</div>
+					</a>
+
+					<a href="aboutus.html">
+						<div class="item active">
+							A Propos 
+						</div>
+					</a>
+					<a href="contact.html">
+						<div class="item">
+							Contact
+						</div>
+					</a>
+				
+				<div class="search">
+					<img src="images/loupe.png" />
+				</div>
+			</div>
+			<div class="logo">
+				<a href="index.php"><img src="images/gralogo.jpg" /></a>
+			</div>
+		</div>
+	</div>
+	<div id="searchDiv">
+		<div class="content">
+			<img class="close" src="images/token_x.png" />
+			<input type="text" name="search" placeholder="Type To Search" />
+		</div>
+	</div>
+		<div id="about">
+			<div class="content">
+				<div class="title">
+					<span class="bar">
+						<span class="gras">A PROPOS</span> <span class="italic">GRA Import Export  & Customer Clearance </span>
+					</span>
+					<div class="bBar">
+						.
+					</div>
+				</div>
+				<div class="textjulio">
+					<p>
+						GRA IMPORT EXPORT & Customer Clearance, fondée en  1990  par <b> Guershom RUBIN AIME</b>, est un des plus grands compagnie de service de dédouanement en Haïti . Notre expérience de plus de 26 ans vous garantit une relation de confiance.
+						Depuis 26 ans notre compagnie  offre l'avantage de pouvoir s'adapter aux besoins de chaque client et de leur fournir un service complet que seule notre compagnie peut offrir.
+						<a href="aboutus.html">Lire la suite<a/>
+					</p>
+				</div>
+				<!-- <?php
+					/* echo '
+					<p>';
+						$txO = $bdd->prepare("SELECT ID, texte FROM text_site WHERE ID = ? AND statut = ?");
+						$txO->execute(array("1", "Actif"));
+						$cnt = $txO->rowCount();
+						
+						if($cnt > 0)
+						{
+							$t = $txO->fetch();
+							
+							echo $t['texte'];
+						}
+						else
+						{
+							echo '
+							<div style="text-align:center;">Sorry, text missing</div>';
+						}
+						echo '
+					</p>
+					<div class="pix">
+						'.Picture($t['ID'], "Text_Site").'
+					</div>'; */
+				?> -->
+			</div>
+		</div>
+		<div id="welcome">
+			<div class="content">
+				<div class="bag">
+					<img src="images/19apie-mus-2.jpg" />
+				</div>
+				<div class="text">
+					<div class="title">Bienvenue à GRA Import Export  & Customer Clearance</div>
+					<div class="title2"> Une compagnie qui prend soin de vos marchandises</div>
+					<div class="bar">
+						<div class="one">
+							Services
+						</div>
+						<div class="two">
+							100%
+						</div>
+					</div>
+					<div class="bar">
+						<div class="one">
+							Importation et Exportation
+						</div>
+						<div class="two">
+							100%
+						</div>
+					</div>
+					<div class="bar">
+						<div class="one">
+							Dédouanement sûr et rapide
+						</div>
+						<div class="two">
+							100%
+						</div>
+					</div>
+					<div class="submit">
+						
+							&#59197;
+						</div>
+						Plus infos
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="infos">
+			<div class="body">
+				<div class="content">
+					<div class="item">
+						<div class="pixOne">
+							&#127912;
+						</div>
+						<div class="text">
+							<div class="cntOne">1125</div>
+							<div class="txt">Importation</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="pixTwo">
+							&#59197;
+						</div>
+						<div class="text">
+							<div class="cntTwo">1560</div>
+							<div class="txt">Exportation</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="pixThree">
+							&#127758;
+						</div>
+						<div class="text">
+							<div class="cntThree">2785</div>
+							<div class="txt">Dédouanement</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="gregory">
+			<div class="content">
+			<div class="textjulio">
+				
+			</div>
+			
+						<div class="pix">
+							<img src="images/dedouane.jpg"/>
+						</div>
+						<div class="infos">
+							<div class="title">
+								<span class="bar">
+									<span class="gras">Gra Import Export  & Customer Clearance </span> <span class="italic">Dédouanement</span>
+								</span>
+								<div class="bBar">
+									.
+								</div>
+								<div class="min">
+									Services
+								</div>
+								<div class="text">
+									<span class="jaune">GRA Import Export  & Customer Clearance </span>
+									Vous pouvez transformer les coûts fixes en coûts variables en confiant l’administration de vos démarches douanières à GRA Import Export  & Customer Clearance. Nous proposons une gamme complète de services liés aux formalités douanières d’exportation et d’importation d’une large gamme de marchandises. Nous assurons notamment les formalités de dédouanement, d’autorisations d’importation, de TCA et de déclarations. Nos spécialistes des douanes ont une connaissance approfondie des conditions et réglementations locales. 	<a href="servive.html"> Lire la suite</a>
+								</div>
+							</div>
+						</div>
+				
+			</div>
+		</div>
+		<div id="gregoryTwo">
+			<div class="content">	
+						<div class="pix">
+							<img src="images/engagement_01.jpg"/>
+						</div>
+						<div class="text">
+							<div class="title">Engager votre entreprise en Haïti </div>
+				
+GRA Import Expor est ici pour élargir et développer votre entreprise  mais enrichissante du commerce international est compliquée . <br/>Grâce à nos services de conseil à l'exportation à l'importation , nous réduisons les risques , les ressources et l'engagement financier que votre entreprise serait autrement engager à entrer avec succès sur les marchés Haïtien . <br/> Chaque entreprise est unique avec différents besoins ainsi vos solutions commerciales internationales seront le reflet. GRA Import Export  & Customer Clearance va travailler avec diligence pour fournir un plan complet et informatif personnalisé international importation et d'exportation afin de maximiser vos profits tout en créant de longue durée des relations commerciales avec les clients sur les marchés étrangers . <a href="servive.html"> Lire la suite</a>
+
+						</div>
+				
+			</div>
+		</div>
+		<div id="gregoryThree">
+			<div class="content">
+						
+						<div class="pix">
+							<img src="images/telecommunications.jpg"/>
+						</div>
+						<div class="text">
+							<div class="title">
+							Notre spécialité
+							</div>
+							<div class="txt">
+								Nous travaillons surtout avec des entreprises qui désirent dédouané des matériels de télécommunications  , En leurs offant un servives rapide et fiable 
+							<ul>
+								<li>Bts</li> 
+								<li>PBX</li> 
+								<li>Antenne satelite </li>
+								<li>Des émetteurs </li>
+								<li>Des camera de survellaince </li>
+								<li>Ect...</li>
+								
+							</ul>
+							</div>
+						</div>
+				
+			</div>
+		</div>
+		<div id="what">
+			<div class="content">
+				<div class="title">
+					<span class="bar">
+						<span class="gras">Ce que nos clients  </span> <span class="italic">Disent</span>
+					</span>
+					<div class="bBar">
+						.
+					</div>
+					<div class="min">
+						Écoutons ce que nos clients  disent de nous
+					</div>
+				</div>
+				<div class="text">
+					J'adore cette entreprise! Je travail avec eux depuis 10 ans , j’ai jamais eu de Problème pour importer, exporter et douanée mes marchandises .Ne pouvait pas être plus heureux . Merci GRA Import Export
+				</div>
+				<div class="client">
+					<div class="pix">
+						<img src="images/client.jpg" />
+					</div>
+					<div class="name">
+						<strong>Audige Reginal</strong><br /><span>Responsable logistique de tips</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <?php include("includes/piedPage.php");?> -->
+		
+	<div id="contact">
+		<div class="content">
+			<table>
+				<tr>
+					<td>
+						<div class="item">
+							<img class="logopied" src="images/gralogo.jpg" />
+							<div class="txt">
+								GRA Import Export   & Customer Clearanceest la meilleur options pour dédouanée des marchandises
+							</div>
+							<span class="em"><em>Enjoy your design!</em></span>
+							
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="item">
+							<div class="titre">Information sur la compagnie</div>
+							<div class="it">
+								<span class="square">▪</span> 
+								<a href="aboutus.html"> A Propos de GRA Import Export  & Customer Clearance</a>
+							</div>
+							<div class="it">
+								<span class="square">▪</span> 
+								GRA Import Export  & Customer Clearance
+							</div>
+							<div class="it">
+								<span class="square">▪</span> 
+								Privacy Policy
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="item">
+							<div class="titre">Newsletter</div>
+							<label for="mail">Email adress</label><br />
+							<input class="input" type="email" name="email" placeholder="Your email address" />
+							<input class="submit" type="submit" value="Sign up" />
+						</div>
+					</td>
+					<td>
+						<div class="item">
+							<div class="titre">Tags</div>
+							
+						<ul>
+							<li>GRA - RENT A CAR </li>
+							<li>GRA - Transport </li>
+						</ul>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="copyright">
+			© Copyright <!-- '.date('Y').' --> Mai 2016 - GRA Import Export & Customer Clearance | Design by <a href="www.fihdel.com">FIHDEL</a>
+		</div>
+	</div>
+	<div id="modal">
+		<div class="loading">
+			<img src="images/loading.gif" /><br />
+			Loading
+		</div>
+		<div class="alert">
+			
+		</div>
+		<div class="shop">
+			
+		</div>
+	</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
