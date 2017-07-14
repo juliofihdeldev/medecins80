@@ -187,7 +187,7 @@ if(isset($_POST['stripeToken']))
 			
 							<textarea class="textarea" name="yourMessage" placeholder="* Your Message:" required></textarea>
                             <input class="submit" type="submit" value="Send" />
-                            
+							i don't know how to do it now but later i ll know
                         </form>
                         -->
                           <form action="" method="POST">
