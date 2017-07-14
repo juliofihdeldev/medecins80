@@ -1,3 +1,82 @@
+<?php
+/**
+ * Stripe - Payment Gateway integration example (Stripe Checkout)
+ * ==============================================================================
+ * 
+ * @version v1.0: stripe_pay_checkout_demo.php 2016/10/05
+ * @copyright Copyright (c) 2016, http://www.ilovephp.net
+ * @author Sagar Deshmukh <sagarsdeshmukh91@gmail.com>
+ * You are free to use, distribute, and modify this software
+ * ==============================================================================
+ *
+ */
+// Stripe library
+require 'stripe/stripe/Stripe.php';
+$params = array(
+	"testmode"   => "on",
+	"private_live_key" => "sk_live_xxxxxxxxxxxxxxxxxxxxx",
+	"public_live_key"  => "pk_live_xxxxxxxxxxxxxxxxxxxxx",
+	"private_test_key" => "sk_test_UljnM2wrIJlK93ObXguBR7L5",
+	"public_test_key"  => "pk_test_JFAYO47MdU2oeuTQrjdwDpT4"
+);
+if ($params['testmode'] == "on") {
+	Stripe::setApiKey($params['private_test_key']);
+	$pubkey = $params['public_test_key'];
+} else {
+	Stripe::setApiKey($params['private_live_key']);
+	$pubkey = $params['public_live_key'];
+}
+if(isset($_POST['stripeToken']))
+{
+	$amount_cents = str_replace(".","","32.52");  // Chargeble amount
+	$invoiceid = "14526321";                      // Invoice ID
+	$description = "Invoice #" . $invoiceid . " - " . $invoiceid;
+	try {
+		$charge = Stripe_Charge::create(array(		 
+			  "amount" => $amount_cents,
+			  "currency" => "usd",
+			  "source" => $_POST['stripeToken'],
+			  "description" => $description)			  
+		);
+		if ($charge->card->address_zip_check == "fail") {
+			throw new Exception("zip_check_invalid");
+		} else if ($charge->card->address_line1_check == "fail") {
+			throw new Exception("address_check_invalid");
+		} else if ($charge->card->cvc_check == "fail") {
+			throw new Exception("cvc_check_invalid");
+		}
+		// Payment has succeeded, no exceptions were thrown or otherwise caught				
+		$result = "success";
+	} catch(Stripe_CardError $e) {			
+	$error = $e->getMessage();
+		$result = "declined";
+	} catch (Stripe_InvalidRequestError $e) {
+		$result = "declined";		  
+	} catch (Stripe_AuthenticationError $e) {
+		$result = "declined";
+	} catch (Stripe_ApiConnectionError $e) {
+		$result = "declined";
+	} catch (Stripe_Error $e) {
+		$result = "declined";
+	} catch (Exception $e) {
+		if ($e->getMessage() == "zip_check_invalid") {
+			$result = "declined";
+		} else if ($e->getMessage() == "address_check_invalid") {
+			$result = "declined";
+		} else if ($e->getMessage() == "cvc_check_invalid") {
+			$result = "declined";
+		} else {
+			$result = "declined";
+		}		  
+	}
+	
+	echo "<BR>Stripe Payment Status : ".$result;
+	
+	echo "<BR>Stripe Response : ";
+	
+	print_r($charge); exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
        <head>
@@ -94,9 +173,9 @@
 							Faites un don a l'organisation
 						</div>
 						<div class="titleTwo">
-							
-				 
-						</div>
+						    <input type="Number" placeholder="1000 $ us" name="montant" class="montant" hidden /> 
+                        </div>
+                        <!--
 						<form id="sendMessage" method="POST" action="">
 							<input type="text" value="sendMessage" name="w" hidden/>
 							<input class="input" type="text" name="Votre nom" placeholder="* Votre nom:" required/>
@@ -107,8 +186,22 @@
 							<input class="input" type="month" name="expiration" placeholder="* Dae d'expiration:" required/>
 			
 							<textarea class="textarea" name="yourMessage" placeholder="* Your Message:" required></textarea>
-							<input class="submit" type="submit" value="Send" />
-						</form>
+                            <input class="submit" type="submit" value="Send" />
+                            
+                        </form>
+                        -->
+                          <form action="" method="POST">
+                                <script
+                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<?php echo $params['public_test_key']; ?>"
+               						data-amount="9999"
+                                    data-name="Medecins80.COM"
+                                    data-description="Donation"
+                                    data-image="http://medecins80.com/dev/images/logo.jpg"
+                                    data-locale="auto"
+                                    data-zip-code="true">
+                                </script>
+                            </form>
 						<div class="btnInfoResult">
 							
 								<div class="infoResult">
@@ -256,6 +349,49 @@
 			
 		</div>
 	</div>
-		<script src="js/main.js"></script>
-	</body>
+        <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<!-- TO DO : Place below JS code in js file and include that JS file -->
+<script type="text/javascript">
+	Stripe.setPublishableKey('<?php echo $params['public_test_key']; ?>');
+  
+	$(function() {
+	  var $form = $('#payment-form');
+	  $form.submit(function(event) {
+		// Disable the submit button to prevent repeated clicks:
+		$form.find('.submit').prop('disabled', true);
+	
+		// Request a token from Stripe:
+		Stripe.card.createToken($form, stripeResponseHandler);
+	
+		// Prevent the form from being submitted:
+		return false;
+	  });
+	});
+
+	function stripeResponseHandler(status, response) {
+	  // Grab the form:
+	  var $form = $('#payment-form');
+	
+	  if (response.error) { // Problem!
+	
+		// Show the errors on the form:
+		$form.find('.payment-errors').text(response.error.message);
+		$form.find('.submit').prop('disabled', false); // Re-enable submission
+	
+	  } else { // Token was created!
+	
+		// Get the token ID:
+		var token = response.id;
+
+		// Insert the token ID into the form so it gets submitted to the server:
+		$form.append($('<input type="hidden" name="stripeToken">').val(token));
+	
+		// Submit the form:
+		$form.get(0).submit();
+	  }
+	};
+</script>
+</body>
 </html>

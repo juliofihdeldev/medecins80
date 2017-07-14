@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 12 Juillet 2017 à 15:12
+-- Généré le :  Ven 14 Juillet 2017 à 17:13
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -40,18 +40,10 @@ CREATE TABLE `activites` (
 --
 
 INSERT INTO `activites` (`ID_activites`, `id_users`, `titre`, `description`, `photo`, `etat`) VALUES
-(28, 1, 'knknkn', 'jnnn', '1498924819_180 120  ok.png', ''),
-(29, 1, 'knknkn', 'jnnn', '1498924821_180 120  ok.png', ''),
-(27, 1, 'knknkn', 'jnnn', '1498924817_180 120  ok.png', ''),
-(26, 1, 'jj', 'h ', '1498707047_180 120  ok.png', ''),
-(25, 1, 'j', 'j', '1498706998_1024 500.jpg', ''),
-(24, 1, 'kkkKK', 'kk', '1498706979_logo.jpg', ''),
-(6, 1, 'Titre de master carte ', 'Titre de master carte ', '1498705852_mastercarte.png', ''),
-(23, 1, 'kkkKK', 'kk', '1498706977_logo.jpg', ''),
-(22, 1, 'Logo officiel de job etrouve', 'Le logo officiel de job etrouve', '1498706927_logopn.png', ''),
-(21, 1, 'Job etrouve', 'Premier application mobile en moitier d\'emploi', '1498706841_4096.jpg', ''),
-(20, 1, 'Job etrouvve activites', 'Job etrouve activite', '1498706781_img3.jpg', ''),
-(19, 1, 'Job etrouvve activites', 'Job etrouve activite', '1498706779_img3.jpg', '');
+(1, 1, ' Patrick jean fils ', 'Mon fils', '1499904687_1449512489_julio.jpg', 'show'),
+(2, 1, 'Julio jean fils', 'Un article sur julio jean fils', '1499904691_1449512489_julio.jpg', 'show'),
+(3, 1, 'Mon patron', 'Mon ancien patron', '1499904839_1449199004_Patrick Marcelin.jpg', 'show'),
+(4, 1, 'Event', 'Some event', '1499904903_1449514211_Happy_Hour_sm.jpg', 'show');
 
 -- --------------------------------------------------------
 
@@ -115,7 +107,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `activites`
 --
 ALTER TABLE `activites`
-  MODIFY `ID_activites` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `ID_activites` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `photo`
 --

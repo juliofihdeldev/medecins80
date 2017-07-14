@@ -79,8 +79,9 @@ header
 	top:0;
 	left:0;
 	right:0;
-	width:100%;
-	position:;
+	width:70%;
+	padding-left: 20%;
+	padding-right: 10%;
 	height:60px;
 	line-height:60px;
 	color:#333;
@@ -89,6 +90,7 @@ header
 	background:rgba(255,255,255,0.9); 
 	box-shadow:1px 2px 8px #ccc;
 	position:fixed;
+	
 }
 
 #menuDeroulant
@@ -383,7 +385,7 @@ header span.number
 	left:0;
 	z-index:1000;
 	background:rgba(0,0,0,0.80);
-	.display:none;
+	
 }
 
 #boiteadmin .boiteconnexion{
@@ -1742,7 +1744,7 @@ input:placehoder
 	z-index:2;
 	background:#fff;
 	box-shadow:0px 0px 8px  #888;
-	.display:no;
+	display:none;
 }
 
 #modal .content
@@ -4476,6 +4478,21 @@ footer #thee_footer span
 	padding:5px;
 	margin-left:15px;
 	border-radius:4px;	
+}
+
+
+#tableOptions tr td.edit
+{
+	text-align:center;
+	color:#333;
+	font-size: 0.9rem;
+	font-family:calibri;
+	font-weight:bold;
+	background:#eee;
+	border:1px solid #eee;
+	padding:5px;
+	margin-left:15px;
+	border-radius:4px;
 }
 
 #tableOptions tr td:hover

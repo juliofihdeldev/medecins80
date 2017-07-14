@@ -14,7 +14,6 @@
 							'.$data['titre'].'
 						</div>
 						<div class="itemDesc">
-							
 							'.$data['description'].'
 						</div>
 						<div class="prix_article">
@@ -22,7 +21,7 @@
 						</div>
 						<table id="tableOptions">
 							<tr>	
-								<td> Modifier </td>
+								<td class="edit" name="'.$data['ID_activites'].' "> Modifier </td>
 								<td> Supprimer </td>
 							</tr>
 						</table>

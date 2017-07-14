@@ -9,7 +9,6 @@
 		<title> Medecins80 </title>
 		<link rel="icon" type="image/ico" href="img/facebookprofiil-ConvertImage.ico"/>
 		<link media="all" rel="stylesheet" type="text/css" href="css/style.css"/>	
-		<script src="node_modules/backendless/libs/backendless.js" type="text/javascript"></script>
 		<meta charset="utf-8" />
 	</head>
 	<body>			
@@ -357,9 +356,18 @@
 				$("#formulairesMembre .submit").hide();
 			},
 			complete: function(response) {
-				$("#btnFormAdd").fadeIn();
-				$(".small").fadeIn();
-				$(".small .message").fadeIn().html(response.responseText);
+			$("#btnFormAdd").fadeIn();
+					$("#btnFormAdd .boiteconnexion").css({
+						width: "25%",
+						height: "150px",
+							overflow:"hidden",
+					}, 100, function() {
+						// faire autre truck apres
+						location.reload();
+						
+					});
+					
+					$("#btnFormAdd .boiteconnexion .form").fadeIn().html(response.responseText)
 			},
 			error: function()
 			{
@@ -369,4 +377,32 @@
 		}; 
 		$("#addActivite").ajaxForm(options); 
 	});		
+
+	/**Modifier une article**/
+		
+	
+	$('#tableOptions tr td.edit').click(function(){
+
+			var id = $(this).attr("name");
+			let w = "mofierArticle";
+			$.ajax(
+			{
+				url: "ajaxscripts/data.php",
+				type: 'post',
+				data : 'id=' + id + '&w=' + w,   
+				dataType: 'html',
+				success: function(c, r)
+				{		
+					$("#btnFormAdd").fadeIn();
+					$("#btnFormAdd .boiteconnexion .form").fadeIn().html(c)
+			
+				},
+				error: function(msg, c ,r)
+				{
+					
+				} 
+			});
+			
+		});
+		
 </script>
